@@ -1,4 +1,4 @@
-module "basenetwork" {
+module "vpc" {
   source       = "../../"
   cidr         = "${var.cidr}"
   zone         = "${var.zone}"

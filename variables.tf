@@ -5,7 +5,7 @@ variable "account_name" {
 
 variable "cidr" {
   type        = "string"
-  description = "The rnage to be associated witht eh vpc and cleaved into the subnets"
+  description = "The range to be associated with the VPC and cleaved into the subnets"
 }
 
 variable "common_tags" {
