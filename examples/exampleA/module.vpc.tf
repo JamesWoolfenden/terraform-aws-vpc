@@ -1,5 +1,6 @@
 module "vpc" {
-  source       = "../../"
+  source       = "JamesWoolfenden/vpc/aws"
+  version      = "0.0.3"
   cidr         = "${var.cidr}"
   zone         = "${var.zone}"
   common_tags  = "${var.common_tags}"
