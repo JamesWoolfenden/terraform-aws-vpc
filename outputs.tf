@@ -9,16 +9,16 @@ output "public_cidrs" {
 }
 
 output "vpc_id" {
-  value      = "${aws_vpc.main.id}"
-  description= "The ID of your selected VPC"
+  value       = "${aws_vpc.main.id}"
+  description = "The ID of your selected VPC"
 }
 
 output "private_subnets" {
-  value      = "${aws_subnet.private.*.id}"
-  description= "The IDs of your private subnets"
+  value       = "${aws_subnet.private.*.id}"
+  description = "The IDs of your private subnets"
 }
 
 output "public_subnets" {
-  value      = "${aws_subnet.public.*.id}"
-  description= "The IDs of your public subnets"
+  value       = "${aws_subnet.public.*.id}"
+  description = "The IDs of your public subnets"
 }
