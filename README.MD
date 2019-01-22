@@ -45,17 +45,12 @@ common_tags={
 ```make
 Available targets:
 
-  help/all:
-                          Display help for all targets
-  help/short:
-                        This help short screen
-  help:
-                              Help screen
-  lint:
-                              Lint terraform code
+  help:                              Help screen
+  help/all:                          Display help for all targets
+  help/short:                        This help short screen
+  lint:                              Lint terraform code
 
 ```
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -75,6 +70,9 @@ Available targets:
 | public_cidrs | - |
 | public_subnets | - |
 | vpc_id | - |
+
+
+
 
 ## Related Projects
 
@@ -133,7 +131,7 @@ See [LICENSE](LICENSE) for full details.
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 
-[logo]: docs/slalom-logo.png
+[logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
 [slack]: https://cpco.io/slack
