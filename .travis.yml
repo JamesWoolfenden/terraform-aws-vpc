@@ -23,5 +23,4 @@ after_success:
   - git config --global user.name "Travis CI"
   - export GIT_TAG=build-$TRAVIS_BRANCH-$(date -u "+%Y-%m-%d-%H-%M-%S")-$VERSION
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI build $VERSION"
-  - git push origin $GIT_TAG
   - git push --quiet https://$TAGAUTH@github.com/jameswoolfenden/terraform-aws-vpc $GIT_TAG > /dev/null 2>&1
