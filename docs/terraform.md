@@ -12,8 +12,9 @@
 
 | Name | Description |
 |------|-------------|
-| private_cidrs | - |
-| private_subnets | - |
-| public_cidrs | - |
-| public_subnets | - |
-| vpc_id | - |
+| private_cidrs | The CIDR ranges for your private subnets |
+| private_subnets | The IDs of your private subnets |
+| public_cidrs | The CIDR ranges for your public subnets |
+| public_subnets | The IDs of your public subnets |
+| vpc_id | The ID of your selected VPC |
+

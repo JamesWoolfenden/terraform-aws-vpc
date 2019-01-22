@@ -45,36 +45,33 @@ common_tags={
 ```make
 Available targets:
 
-  help:
-                              Help screen
-  help/all:
-                          Display help for all targets
-  help/short:
-                        This help short screen
-  lint:
-                              Lint terraform code
+  help:                              Help screen
+  help/all:                          Display help for all targets
+  help/short:                        This help short screen
+  lint:                              Lint terraform code
 
 ```
 
 ## Inputs
 
-| Name         | Description                                                          |  Type  | Default  | Required |
-|--------------|----------------------------------------------------------------------|:------:|:--------:|:--------:|
-| account_name | -                                                                    | string |    -     |   yes    |
-| cidr         | The range to be associated with the VPC and cleaved into the subnets | string |    -     |   yes    |
-| common_tags  | A tagging scheme                                                     |  map   |    -     |   yes    |
-| depends_on   | This is a way to make a module depends on, which isnt built in.      |  list  | `<list>` |    no    |
-| zone         | Availablity zone names                                               |  list  |    -     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| account_name | - | string | - | yes |
+| cidr | The range to be associated with the VPC and cleaved into the subnets | string | - | yes |
+| common_tags | A tagging scheme | map | - | yes |
+| depends_on | This is a way to make a module depends on, which isnt built in. | list | `<list>` | no |
+| zone | Availablity zone names | list | - | yes |
 
 ## Outputs
 
-| Name            | Description |
-|-----------------|-------------|
-| private_cidrs   | -           |
-| private_subnets | -           |
-| public_cidrs    | -           |
-| public_subnets  | -           |
-| vpc_id          | -           |
+| Name | Description |
+|------|-------------|
+| private_cidrs | The CIDR ranges for your private subnets |
+| private_subnets | The IDs of your private subnets |
+| public_cidrs | The CIDR ranges for your public subnets |
+| public_subnets | The IDs of your public subnets |
+| vpc_id | The ID of your selected VPC |
+
 
 ## Related Projects
 
@@ -87,6 +84,7 @@ Check out these related projects.
 **Got a question?**
 
 File a GitHub [issue](https://github.com/jameswoolfenden/terraform-aws-vpc/issues).
+
 
 ## Contributing
 
@@ -128,6 +126,8 @@ See [LICENSE](LICENSE) for full details.
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
+
+
 
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
