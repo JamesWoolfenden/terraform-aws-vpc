@@ -29,7 +29,7 @@ module "vpc" {
 
 Using these as your values in your terraform tfvars file:
 
-~~~ YAML
+```YAML
 account_name = "test"
 cidr         = "10.0.0.0/21"
 zone         = ["A","B","C"]
@@ -38,7 +38,7 @@ common_tags={
     Application=           "base"
     Environment=           "Management"
 }
-~~~
+```
 
 ## Makefile Targets
 
@@ -58,23 +58,23 @@ Available targets:
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| account_name | - | string | - | yes |
-| cidr | The range to be associated with the VPC and cleaved into the subnets | string | - | yes |
-| common_tags | A tagging scheme | map | - | yes |
-| depends_on | This is a way to make a module depends on, which isnt built in. | list | `<list>` | no |
-| zone | Availablity zone names | list | - | yes |
+| Name         | Description                                                          |  Type  | Default  | Required |
+|--------------|----------------------------------------------------------------------|:------:|:--------:|:--------:|
+| account_name | -                                                                    | string |    -     |   yes    |
+| cidr         | The range to be associated with the VPC and cleaved into the subnets | string |    -     |   yes    |
+| common_tags  | A tagging scheme                                                     |  map   |    -     |   yes    |
+| depends_on   | This is a way to make a module depends on, which isnt built in.      |  list  | `<list>` |    no    |
+| zone         | Availablity zone names                                               |  list  |    -     |   yes    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| private_cidrs | - |
-| private_subnets | - |
-| public_cidrs | - |
-| public_subnets | - |
-| vpc_id | - |
+| Name            | Description |
+|-----------------|-------------|
+| private_cidrs   | -           |
+| private_subnets | -           |
+| public_cidrs    | -           |
+| public_subnets  | -           |
+| vpc_id          | -           |
 
 ## Related Projects
 
