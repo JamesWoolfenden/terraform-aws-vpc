@@ -68,7 +68,6 @@ usage: |-
 
 include:
   - "docs/usage.md"
-  - "docs/targets.md"
   - "docs/terraform.md"
 
 # Contributors to this project

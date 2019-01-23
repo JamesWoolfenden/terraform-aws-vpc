@@ -2,7 +2,7 @@
 
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-vpc [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-vpc.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc/releases/latest)
+# terraform-aws-vpc [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc/releases/latest)
 
 This module is to create a vpc, subnets and routes for your standard vpc structure. Its also implements the common-tag scheme and calculates the breakdown of your cidr.
 
@@ -40,17 +40,6 @@ common_tags={
 }
 ```
 
-## Makefile Targets
-
-```make
-Available targets:
-
-  help:                              Help screen
-  help/all:                          Display help for all targets
-  help/short:                        This help short screen
-  lint:                              Lint terraform code
-
-```
 
 ## Inputs
 
@@ -121,8 +110,8 @@ See [LICENSE](LICENSE) for full details.
 
 ### Contributors
 
-|  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
-|---|
+  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
+
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
