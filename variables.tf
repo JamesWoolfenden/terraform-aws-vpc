@@ -1,28 +1,21 @@
 variable "account_name" {
-  type        = "string"
+  type        = string
   description = ""
 }
 
 variable "cidr" {
-  type        = "string"
+  type        = string
   description = "The range to be associated with the VPC and cleaved into the subnets"
 }
 
 variable "common_tags" {
-  type        = "map"
+  type        = map
   description = "A tagging scheme"
 }
 
 variable "zone" {
-  type        = "list"
+  type        = list
   description = "Availablity zone names"
-}
-
-# this is enables you to add dependancies
-variable depends_on {
-  default     = []
-  description = "This is a way to make a module depends on, which isnt built in."
-  type        = "list"
 }
 
 locals {

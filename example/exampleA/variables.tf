@@ -1,15 +1,15 @@
 variable "cidr" {
-  type = "string"
+  type = string
 }
 
 variable "zone" {
-  type = "list"
+  type = list
 }
 
 variable "account_name" {
-  type = "string"
+  type = string
 }
 
 variable "common_tags" {
-  type = "map"
+  type = map
 }
