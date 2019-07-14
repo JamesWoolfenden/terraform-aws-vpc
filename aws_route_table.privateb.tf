@@ -4,7 +4,7 @@ resource "aws_route_table" "privateb" {
   propagating_vgws = [aws_vpn_gateway.vpn_gw.id]
 
   tags = merge(var.common_tags,
-               map("Name", "${var.account_name}-Private-${element(aws_subnet.private.*.id, 1)}"))
+  map("Name", "${var.account_name}-Private-${element(aws_subnet.private.*.id, 1)}"))
 }
 
 resource "aws_route" "privateb" {

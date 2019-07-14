@@ -5,6 +5,6 @@ resource "aws_subnet" "private" {
   availability_zone = data.aws_availability_zones.available.names[count.index]
 
   tags = merge(var.common_tags,
-               map("Type", "Private"),
-               map("Name", "${upper(var.account_name)}-Private-${var.zone[count.index]}"))
+    map("Type", "Private"),
+  map("Name", "${upper(var.account_name)}-Private-${var.zone[count.index]}"))
 }

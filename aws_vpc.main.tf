@@ -4,5 +4,5 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
 
   tags = merge(var.common_tags,
-               map("Name", upper(var.account_name)))
+  map("Name", upper(var.account_name)))
 }
