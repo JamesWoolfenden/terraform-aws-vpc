@@ -1,9 +1,5 @@
 output "private_cidrs" {
-<<<<<<< Updated upstream
   value       = module.vpc.private_cidrs
-=======
-  value       = "${module.vpc.private_cidrs}"
->>>>>>> Stashed changes
   description = "The CIDR ranges used in the private subnets"
 }
 
