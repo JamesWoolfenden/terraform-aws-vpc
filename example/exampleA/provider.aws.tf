@@ -1,6 +1,6 @@
 provider "aws" {
   version = "2.19.0"
-  region  = "eu-west-1"
+  region  = "eu-west-2"
 }
 
 provider "template" {

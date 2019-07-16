@@ -18,6 +18,13 @@ variable "zone" {
   description = "Availablity zone names"
 }
 
+variable "subnets" {
+  type=number
+  default=3
+  description="The number of subnets required, less than or equal to the number of availability zones"
+}
+
+
 locals {
   public_cidrs  = ["${cidrsubnet("${var.cidr}", 3, 0)}", "${cidrsubnet("${var.cidr}", 3, 1)}", "${cidrsubnet("${var.cidr}", 3, 2)}"]
   private_cidrs = ["${cidrsubnet("${var.cidr}", 3, 3)}", "${cidrsubnet("${var.cidr}", 3, 4)}", "${cidrsubnet("${var.cidr}", 3, 5)}"]
