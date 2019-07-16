@@ -19,9 +19,9 @@ variable "zone" {
 }
 
 variable "subnets" {
-  type=number
-  default=3
-  description="The number of subnets required, less than or equal to the number of availability zones"
+  type        = number
+  default     = 3
+  description = "The number of subnets required, less than or equal to the number of availability zones"
 }
 
 
