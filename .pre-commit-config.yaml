@@ -16,7 +16,7 @@ repos:
   rev: v1.1.6
   hooks:
   - id: forbid-tabs
-    exclude_types: [python, javascript, dtd, markdown, makefile]
+    exclude_types: [python, javascript, dtd, markdown, makefile, xml]
     exclude: binary|\.bin$
 - repo: git://github.com/kintoandar/pre-commit.git
   rev: v2.1.0
@@ -41,4 +41,4 @@ repos:
 - repo: git://github.com/antonbabenko/pre-commit-terraform
   rev: v1.17.0
   hooks:
-    - id: terraform_docs
+  - id: terraform_docs

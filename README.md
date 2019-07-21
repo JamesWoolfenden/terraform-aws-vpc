@@ -4,7 +4,7 @@
 # terraform-aws-vpc [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc/releases/latest)
 
 This module is to create a VPC, Sub-nets and routes for your standard AWS VPC pattern. It also implements the common-tag scheme and calculates the breakdown of your CIDR.
-This module defaults to creating 3 private subnets and public subnets, or optionally less.
+This module defaults to creating 3 private subnets and public sub-nets, or optionally less.
 
 ---
 
@@ -109,7 +109,7 @@ under the License.
 
 ### Contributors
 
-  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
+  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
