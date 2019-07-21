@@ -37,25 +37,30 @@ common_tags={
     Environment=           "Management"
 }
 ```
-
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| account_name | - | string | - | yes |
-| cidr | The range to be associated with the VPC and cleaved into the subnets | string | - | yes |
-| common_tags | A tagging scheme | map | - | yes |
-| zone | Availablity zone names | list | - | yes |
+| account\_name |  | string | n/a | yes |
+| cidr | The range to be associated with the VPC and cleaved into the subnets | string | n/a | yes |
+| common\_tags | A tagging scheme | map | n/a | yes |
+| subnets | The number of subnets required, less than or equal to the number of availability zones | number | `"3"` | no |
+| zone | Availablity zone names | list | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| private_cidrs | The CIDR ranges for your private subnets |
-| private_subnets | The IDs of your private subnets |
-| public_cidrs | The CIDR ranges for your public subnets |
-| public_subnets | The IDs of your public subnets |
-| vpc_id | The ID of your selected VPC |
+| private\_cidrs | The CIDR ranges for your private subnets |
+| private\_subnets | The IDs of your private subnets |
+| public\_cidrs | The CIDR ranges for your public subnets |
+| public\_subnets | The IDs of your public subnets |
+| vpc\_id | The ID of your selected VPC |
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Instructions
 
 ## Related Projects
 
