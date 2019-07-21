@@ -1,4 +1,4 @@
 resource "aws_eip" "nateip" {
-  count = 3
+  count = var.subnets
   tags  = var.common_tags
 }
