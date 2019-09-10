@@ -4,7 +4,7 @@ output "private_cidrs" {
 }
 
 output "public_cidrs" {
-  value       = local.private_cidrs
+  value       = local.public_cidrs
   description = "The CIDR ranges for your public subnets"
 }
 
