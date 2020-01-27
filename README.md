@@ -8,7 +8,6 @@ This module defaults to creating 3 private subnets and public sub-nets, or optio
 
 ---
 
-
 ## Usage
 
 Include this repository as a module in your existing terraform code:
