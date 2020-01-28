@@ -50,10 +50,13 @@ common_tags={
 
 | Name | Description |
 |------|-------------|
+| private | The Private subnets |
 | private\_cidrs | The CIDR ranges for your private subnets |
 | private\_subnets | The IDs of your private subnets |
+| public | The Public Subnets |
 | public\_cidrs | The CIDR ranges for your public subnets |
 | public\_subnets | The IDs of your public subnets |
+| vpc | The Full VPC |
 | vpc\_id | The ID of your selected VPC |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
