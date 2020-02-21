@@ -1,7 +1,7 @@
 
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-vpc [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc/releases/latest)
+# terraform-aws-vpc [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc/releases/latest) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 This module is to create a VPC, Sub-nets and routes for your standard AWS VPC pattern. It also implements the common-tag scheme and calculates the breakdown of your CIDR.
 This module defaults to creating 3 private sub-nets and public sub-nets, or optionally less.
@@ -35,16 +35,22 @@ common_tags={
     Environment=           "Management"
 }
 ```
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| account\_name |  | string | n/a | yes |
-| cidr | The range to be associated with the VPC and cleaved into the subnets | string | n/a | yes |
-| common\_tags | A tagging scheme | map | n/a | yes |
-| subnets | The number of subnets required, less than or equal to the number of availability zones | number | `"3"` | no |
-| zone | Availablity zone names | list | n/a | yes |
+|------|-------------|------|---------|:-----:|
+| account\_name | n/a | `string` | n/a | yes |
+| cidr | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
+| common\_tags | A tagging scheme | `map` | n/a | yes |
+| subnets | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
+| zone | Availablity zone names | `list` | n/a | yes |
 
 ## Outputs
 
@@ -85,9 +91,8 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
   [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
 
-  [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
-  [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-
+[jameswoolfenden_homepage]: https://github.com/jameswoolfenden
+[jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
