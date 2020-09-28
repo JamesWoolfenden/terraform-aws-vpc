@@ -1,6 +1,3 @@
-
-[![Slalom][logo]](https://slalom.com)
-
 # terraform-aws-vpc
 
 [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-vpc/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-vpc)
@@ -12,6 +9,7 @@ This module is to create a VPC, Sub-nets and routes for your standard AWS VPC pa
 This module defaults to creating 3 private sub-nets and public sub-nets, or optionally less.
 
 ---
+
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
@@ -41,7 +39,9 @@ common_tags={
     Environment=           "Management"
 }
 ```
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
@@ -49,31 +49,31 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
-| aws | n/a |
+| ---- | ------- |
+| aws  | n/a     |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| account\_name | n/a | `string` | n/a | yes |
-| cidr | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
-| common\_tags | A tagging scheme | `map` | n/a | yes |
-| subnets | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
-| zone | Availablity zone names | `list` | n/a | yes |
+| Name         | Description                                                                            | Type     | Default | Required |
+| ------------ | -------------------------------------------------------------------------------------- | -------- | ------- | :------: |
+| account_name | n/a                                                                                    | `string` | n/a     |   yes    |
+| cidr         | The range to be associated with the VPC and cleaved into the subnets                   | `string` | n/a     |   yes    |
+| common_tags  | A tagging scheme                                                                       | `map`    | n/a     |   yes    |
+| subnets      | The number of subnets required, less than or equal to the number of availability zones | `number` | `3`     |    no    |
+| zone         | Availablity zone names                                                                 | `list`   | n/a     |   yes    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| private | The Private subnets |
-| private\_cidrs | The CIDR ranges for your private subnets |
-| private\_subnets | The IDs of your private subnets |
-| public | The Public Subnets |
-| public\_cidrs | The CIDR ranges for your public subnets |
-| public\_subnets | The IDs of your public subnets |
-| vpc | The Full VPC |
-| vpc\_id | The ID of your selected VPC |
+| Name            | Description                              |
+| --------------- | ---------------------------------------- |
+| private         | The Private subnets                      |
+| private_cidrs   | The CIDR ranges for your private subnets |
+| private_subnets | The IDs of your private subnets          |
+| public          | The Public Subnets                       |
+| public_cidrs    | The CIDR ranges for your public subnets  |
+| public_subnets  | The IDs of your public subnets           |
+| vpc             | The Full VPC                             |
+| vpc_id          | The ID of your selected VPC              |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
@@ -99,16 +99,12 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ### Contributors
 
-  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
+[![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-[logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
-[website]: https://slalom.com
 [linkedin]: https://www.linkedin.com/in/jameswoolfenden/
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
 [twitter]: https://twitter.com/JimWoolfenden
-
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-vpc&url=https://github.com/jameswoolfenden/terraform-aws-vpc
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-vpc&url=https://github.com/jameswoolfenden/terraform-aws-vpc
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/jameswoolfenden/terraform-aws-vpc
