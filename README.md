@@ -41,7 +41,6 @@ common_tags={
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -49,31 +48,31 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name         | Description                                                                            | Type     | Default | Required |
-| ------------ | -------------------------------------------------------------------------------------- | -------- | ------- | :------: |
-| account_name | n/a                                                                                    | `string` | n/a     |   yes    |
-| cidr         | The range to be associated with the VPC and cleaved into the subnets                   | `string` | n/a     |   yes    |
-| common_tags  | A tagging scheme                                                                       | `map`    | n/a     |   yes    |
-| subnets      | The number of subnets required, less than or equal to the number of availability zones | `number` | `3`     |    no    |
-| zone         | Availablity zone names                                                                 | `list`   | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| account\_name | n/a | `string` | n/a | yes |
+| cidr | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
+| common\_tags | A tagging scheme | `map` | n/a | yes |
+| subnets | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
+| zone | Availablity zone names | `list` | n/a | yes |
 
 ## Outputs
 
-| Name            | Description                              |
-| --------------- | ---------------------------------------- |
-| private         | The Private subnets                      |
-| private_cidrs   | The CIDR ranges for your private subnets |
-| private_subnets | The IDs of your private subnets          |
-| public          | The Public Subnets                       |
-| public_cidrs    | The CIDR ranges for your public subnets  |
-| public_subnets  | The IDs of your public subnets           |
-| vpc             | The Full VPC                             |
-| vpc_id          | The ID of your selected VPC              |
+| Name | Description |
+|------|-------------|
+| private | The Private subnets |
+| private\_cidrs | The CIDR ranges for your private subnets |
+| private\_subnets | The IDs of your private subnets |
+| public | The Public Subnets |
+| public\_cidrs | The CIDR ranges for your public subnets |
+| public\_subnets | The IDs of your public subnets |
+| vpc | The Full VPC |
+| vpc\_id | The ID of your selected VPC |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
