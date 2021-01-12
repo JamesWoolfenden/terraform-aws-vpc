@@ -1,6 +1,6 @@
 variable "account_name" {
   type        = string
-  description = ""
+  description = "The Name of the Account"
 }
 
 variable "cidr" {
@@ -15,7 +15,7 @@ variable "common_tags" {
 
 variable "zone" {
   type        = list(any)
-  description = "Availablity zone names"
+  description = "Availability zone names"
 }
 
 variable "subnets" {
@@ -24,8 +24,7 @@ variable "subnets" {
   description = "The number of subnets required, less than or equal to the number of availability zones"
 }
 
-
 locals {
-  public_cidrs  = ["${cidrsubnet("${var.cidr}", 3, 0)}", "${cidrsubnet("${var.cidr}", 3, 1)}", "${cidrsubnet("${var.cidr}", 3, 2)}"]
-  private_cidrs = ["${cidrsubnet("${var.cidr}", 3, 3)}", "${cidrsubnet("${var.cidr}", 3, 4)}", "${cidrsubnet("${var.cidr}", 3, 5)}"]
+  public_cidrs  = [cidrsubnet(var.cidr, 3, 0), cidrsubnet(var.cidr, 3, 1), cidrsubnet(var.cidr, 3, 2)]
+  private_cidrs = [cidrsubnet(var.cidr, 3, 3), cidrsubnet(var.cidr, 3, 4), cidrsubnet(var.cidr, 3, 5)]
 }

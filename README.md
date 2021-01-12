@@ -55,11 +55,11 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| account\_name | n/a | `string` | n/a | yes |
+| account\_name | The Name of the Account | `string` | n/a | yes |
 | cidr | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
 | common\_tags | A tagging scheme | `map(any)` | n/a | yes |
 | subnets | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
-| zone | Availablity zone names | `list(any)` | n/a | yes |
+| zone | Availability zone names | `list(any)` | n/a | yes |
 
 ## Outputs
 
@@ -102,6 +102,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
+[github]: https://github.com/jameswoolfenden
 [linkedin]: https://www.linkedin.com/in/jameswoolfenden/
 [twitter]: https://twitter.com/JimWoolfenden
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-vpc&url=https://github.com/jameswoolfenden/terraform-aws-vpc
