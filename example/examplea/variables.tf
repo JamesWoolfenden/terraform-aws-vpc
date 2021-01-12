@@ -3,7 +3,7 @@ variable "cidr" {
 }
 
 variable "zone" {
-  type = list
+  type = list(any)
 }
 
 variable "account_name" {
@@ -11,5 +11,5 @@ variable "account_name" {
 }
 
 variable "common_tags" {
-  type = map
+  type = map(any)
 }

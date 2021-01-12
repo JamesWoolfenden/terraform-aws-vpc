@@ -9,12 +9,12 @@ variable "cidr" {
 }
 
 variable "common_tags" {
-  type        = map
+  type        = map(any)
   description = "A tagging scheme"
 }
 
 variable "zone" {
-  type        = list
+  type        = list(any)
   description = "Availablity zone names"
 }
 

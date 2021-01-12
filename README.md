@@ -57,9 +57,9 @@ No requirements.
 |------|-------------|------|---------|:--------:|
 | account\_name | n/a | `string` | n/a | yes |
 | cidr | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
-| common\_tags | A tagging scheme | `map` | n/a | yes |
+| common\_tags | A tagging scheme | `map(any)` | n/a | yes |
 | subnets | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
-| zone | Availablity zone names | `list` | n/a | yes |
+| zone | Availablity zone names | `list(any)` | n/a | yes |
 
 ## Outputs
 
