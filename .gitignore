@@ -4,14 +4,22 @@
 *.zip
 
 # Module directory
+.terraform/
 .terraform
 __pycache__/
 .idea
 *.iml
+*.orig
+
 *.ini
-tmp
 *~HEAD
 *backup
-*.orig
+*.ini
+tmp
+lambda
+*~HEAD
+*backup
 *.bak
+.terraform.tfstate.lock.info
 .terraform.lock.hcl
+*.log
