@@ -45,7 +45,58 @@ common_tags={
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
 
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_availability_zones](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) |
+| [aws_eip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) |
+| [aws_internet_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) |
+| [aws_nat_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/nat_gateway) |
+| [aws_network_acl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_acl) |
+| [aws_route](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) |
+| [aws_route_table](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) |
+| [aws_route_table_association](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) |
+| [aws_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) |
+| [aws_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) |
+| [aws_vpn_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpn_gateway) |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| account\_name | The Name of the Account | `string` | n/a | yes |
+| cidr | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
+| common\_tags | A tagging scheme | `map(any)` | n/a | yes |
+| subnets | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
+| zone | Availability zone names | `list(any)` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| private | The Private subnets |
+| private\_cidrs | The CIDR ranges for your private subnets |
+| private\_subnets | The IDs of your private subnets |
+| public | The Public Subnets |
+| public\_cidrs | The CIDR ranges for your public subnets |
+| public\_subnets | The IDs of your public subnets |
+| vpc | The Full VPC |
+| vpc\_id | The ID of your selected VPC |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Instructions
