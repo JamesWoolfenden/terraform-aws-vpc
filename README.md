@@ -70,7 +70,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright Â© 2019-2021 James Woolfenden
 
 ## License
 
