@@ -50,12 +50,6 @@ repos:
         language_version: python3.8
       - id: tf2docs
         language_version: python3.8
-  - repo: git://github.com/JamesWoolfenden/git-hooks
-    rev: v0.0.7
-    hooks:
-      - id: yor
-        args: [example/examplea]
-        always_run: true
   - repo: git://github.com/bridgecrewio/checkov
     rev: 1.0.863
     hooks:
