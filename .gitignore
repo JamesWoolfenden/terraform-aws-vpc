@@ -8,6 +8,7 @@
 .terraform
 .plugins/
 __pycache__/
+.vscode/
 .idea
 *.iml
 *.orig
