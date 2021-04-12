@@ -53,50 +53,55 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [aws_availability_zones](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) |
-| [aws_eip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) |
-| [aws_internet_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) |
-| [aws_nat_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/nat_gateway) |
-| [aws_network_acl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_acl) |
-| [aws_route](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) |
-| [aws_route_table](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) |
-| [aws_route_table_association](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) |
-| [aws_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) |
-| [aws_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) |
-| [aws_vpn_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpn_gateway) |
+| Name | Type |
+|------|------|
+| [aws_eip.nateip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
+| [aws_internet_gateway.gw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | resource |
+| [aws_nat_gateway.natgateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/nat_gateway) | resource |
+| [aws_network_acl.networkaclprivate](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_acl) | resource |
+| [aws_network_acl.networkaclpublic](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_acl) | resource |
+| [aws_route.private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
+| [aws_route.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
+| [aws_route_table.private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) | resource |
+| [aws_route_table.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) | resource |
+| [aws_route_table_association.private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
+| [aws_route_table_association.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
+| [aws_subnet.private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
+| [aws_subnet.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
+| [aws_vpc.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
+| [aws_vpn_gateway.vpn_gw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpn_gateway) | resource |
+| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| account\_name | The Name of the Account | `string` | n/a | yes |
-| cidr | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
-| common\_tags | A tagging scheme | `map(any)` | n/a | yes |
-| subnets | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
-| zone | Availability zone names | `list(any)` | n/a | yes |
+| <a name="input_account_name"></a> [account\_name](#input\_account\_name) | The Name of the Account | `string` | n/a | yes |
+| <a name="input_cidr"></a> [cidr](#input\_cidr) | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A tagging scheme | `map(any)` | n/a | yes |
+| <a name="input_subnets"></a> [subnets](#input\_subnets) | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
+| <a name="input_zone"></a> [zone](#input\_zone) | Availability zone names | `list(any)` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| private | The Private subnets |
-| private\_cidrs | The CIDR ranges for your private subnets |
-| private\_subnets | The IDs of your private subnets |
-| public | The Public Subnets |
-| public\_cidrs | The CIDR ranges for your public subnets |
-| public\_subnets | The IDs of your public subnets |
-| vpc | The Full VPC |
-| vpc\_id | The ID of your selected VPC |
+| <a name="output_private"></a> [private](#output\_private) | The Private subnets |
+| <a name="output_private_cidrs"></a> [private\_cidrs](#output\_private\_cidrs) | The CIDR ranges for your private subnets |
+| <a name="output_private_subnets"></a> [private\_subnets](#output\_private\_subnets) | The IDs of your private subnets |
+| <a name="output_public"></a> [public](#output\_public) | The Public Subnets |
+| <a name="output_public_cidrs"></a> [public\_cidrs](#output\_public\_cidrs) | The CIDR ranges for your public subnets |
+| <a name="output_public_subnets"></a> [public\_subnets](#output\_public\_subnets) | The IDs of your public subnets |
+| <a name="output_vpc"></a> [vpc](#output\_vpc) | The Full VPC |
+| <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of your selected VPC |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Instructions
