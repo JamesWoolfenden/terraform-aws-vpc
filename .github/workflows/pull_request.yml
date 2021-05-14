@@ -50,10 +50,10 @@ jobs:
           python-version: 3.8
       - run: |
           pip3 install lastversion
-          pip3 install lastversion
-          lastversion terraform-docs --assets -d --verbose
+          now=$(lastversion terraform-docs)
           mkdir $GITHUB_WORKSPACE/bin
-          tar -xvf terraform-docs*.tar.gz --directory $GITHUB_WORKSPACE/bin
+          curl -L https://github.com/terraform-docs/terraform-docs/releases/download/v${now}/terraform-docs-v${now}-$(uname)-amd64.tar.gz -o terraform-docs.tar.gz
+          tar -xvf terraform-docs.tar.gz --directory $GITHUB_WORKSPACE/bin
           chmod +x $GITHUB_WORKSPACE/bin/terraform-docs
           echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
       - uses: pre-commit/action@v2.0.0

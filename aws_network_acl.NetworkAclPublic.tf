@@ -21,5 +21,5 @@ resource "aws_network_acl" "networkaclpublic" {
   }
 
   tags = merge(var.common_tags,
-  map("Name", "${var.account_name}-NetworkAcl-Public"))
+  tomap({ "Name" = "${var.account_name}-NetworkAcl-Public" }))
 }
