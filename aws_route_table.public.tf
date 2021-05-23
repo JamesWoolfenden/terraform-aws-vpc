@@ -1,8 +1,7 @@
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id
 
-  tags = merge(var.common_tags,
-  tomap({ "Name" = "${upper(var.account_name)}-Public" }))
+  tags = { "Name" = "${upper(var.account_name)}-Public" }
 }
 
 resource "aws_route" "public" {

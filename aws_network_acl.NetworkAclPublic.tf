@@ -19,7 +19,4 @@ resource "aws_network_acl" "networkaclpublic" {
     to_port    = 0
     protocol   = "all"
   }
-
-  tags = merge(var.common_tags,
-  tomap({ "Name" = "${var.account_name}-NetworkAcl-Public" }))
 }

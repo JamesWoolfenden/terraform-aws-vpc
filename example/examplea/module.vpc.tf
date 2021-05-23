@@ -2,6 +2,6 @@ module "vpc" {
   source       = "../../"
   cidr         = var.cidr
   zone         = var.zone
-  common_tags  = var.common_tags
+  kms_key_id   = aws_kms_key.flowlog.id
   account_name = var.account_name
 }

@@ -4,7 +4,7 @@ resource "aws_subnet" "public" {
   cidr_block        = local.public_cidrs[count.index]
   availability_zone = data.aws_availability_zones.available.names[count.index]
 
-  tags = merge(var.common_tags,
+  tags = merge(
     tomap({ "Type" = "Public" }),
   tomap({ "Name" = "${upper(var.account_name)}-Public-${var.zone[count.index]}" }))
 }

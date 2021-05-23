@@ -26,7 +26,6 @@ module "vpc" {
   version      = "0.1.21"
   cidr         = var.cidr
   zone         = var.zone
-  common_tags  = var.common_tags
   account_name = var.account_name
 }
 ```
@@ -37,11 +36,6 @@ Using these as your values in your terraform tfvars file:
 account_name = "test"
 cidr         = "10.0.0.0/21"
 zone         = ["A","B","C"]
-common_tags={
-    AccountType=           "Management"
-    Application=           "base"
-    Environment=           "Management"
-}
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
@@ -63,7 +57,11 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_cloudwatch_log_group.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
 | [aws_eip.nateip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
+| [aws_flow_log.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log) | resource |
+| [aws_iam_role.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_internet_gateway.gw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | resource |
 | [aws_nat_gateway.natgateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/nat_gateway) | resource |
 | [aws_network_acl.networkaclprivate](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_acl) | resource |
@@ -77,8 +75,11 @@ No modules.
 | [aws_subnet.private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
 | [aws_subnet.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
 | [aws_vpc.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
+| [aws_vpc_endpoint.ec2](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_endpoint) | resource |
+| [aws_vpc_endpoint.s3](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_endpoint) | resource |
 | [aws_vpn_gateway.vpn_gw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpn_gateway) | resource |
 | [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
+| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) | data source |
 
 ## Inputs
 
@@ -86,7 +87,10 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_account_name"></a> [account\_name](#input\_account\_name) | The Name of the Account | `string` | n/a | yes |
 | <a name="input_cidr"></a> [cidr](#input\_cidr) | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A tagging scheme | `map(any)` | n/a | yes |
+| <a name="input_ec2endpoint"></a> [ec2endpoint](#input\_ec2endpoint) | Toggles for ec2 VPC endpoint | `number` | `1` | no |
+| <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | n/a | `string` | n/a | yes |
+| <a name="input_log_retention_in_days"></a> [log\_retention\_in\_days](#input\_log\_retention\_in\_days) | n/a | `number` | `90` | no |
+| <a name="input_s3endpoint"></a> [s3endpoint](#input\_s3endpoint) | Toggles for s3 VPC endpoint | `number` | `1` | no |
 | <a name="input_subnets"></a> [subnets](#input\_subnets) | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
 | <a name="input_zone"></a> [zone](#input\_zone) | Availability zone names | `list(any)` | n/a | yes |
 

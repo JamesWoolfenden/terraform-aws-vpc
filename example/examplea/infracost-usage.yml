@@ -1,2 +1,12 @@
 version: 0.1
-resource_usage: {}
+resource_usage:
+  module.vpc.aws_cloudwatch_log_group.flowlog:
+    monthly_data_ingested_gb: 0
+    monthly_data_scanned_gb: 0
+    storage_gb: 0
+  module.vpc.aws_nat_gateway.natgateway[0]:
+    monthly_data_processed_gb: 0
+  module.vpc.aws_nat_gateway.natgateway[1]:
+    monthly_data_processed_gb: 0
+  module.vpc.aws_nat_gateway.natgateway[2]:
+    monthly_data_processed_gb: 0
