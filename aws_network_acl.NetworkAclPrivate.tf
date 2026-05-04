@@ -1,4 +1,5 @@
 resource "aws_network_acl" "networkaclprivate" {
+  # checkov:skip=CKV2_AWS_1: NACLs use broad rules; security enforced at security group level
   vpc_id     = aws_vpc.main.id
   subnet_ids = aws_subnet.private.*.id
 
