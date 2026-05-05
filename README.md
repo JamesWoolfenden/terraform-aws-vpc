@@ -130,8 +130,11 @@ resource "aws_iam_policy" "terraform_pike" {
             "Effect": "Allow",
             "Action": [
                 "ec2:AllocateAddress",
+                "ec2:AssignPrivateNatGatewayAddress",
                 "ec2:AssociateAddress",
+                "ec2:AssociateNatGatewayAddress",
                 "ec2:AssociateRouteTable",
+                "ec2:AssociateSubnetCidrBlock",
                 "ec2:AttachInternetGateway",
                 "ec2:AttachVpnGateway",
                 "ec2:AuthorizeSecurityGroupEgress",
@@ -166,6 +169,7 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:DescribeInternetGateways",
                 "ec2:DescribeNatGateways",
                 "ec2:DescribeNetworkAcls",
+                "ec2:DescribeNetworkInterfaces",
                 "ec2:DescribePrefixLists",
                 "ec2:DescribeRouteTables",
                 "ec2:DescribeSecurityGroups",
@@ -177,11 +181,19 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:DetachInternetGateway",
                 "ec2:DetachVpnGateway",
                 "ec2:DisassociateAddress",
+                "ec2:DisassociateNatGatewayAddress",
                 "ec2:DisassociateRouteTable",
+                "ec2:DisassociateSubnetCidrBlock",
+                "ec2:ModifySubnetAttribute",
+                "ec2:ModifyVpcAttribute",
                 "ec2:ModifyVpcEndpoint",
+                "ec2:ModifyVpcTenancy",
                 "ec2:ReleaseAddress",
+                "ec2:ReplaceRoute",
+                "ec2:ReplaceRouteTableAssociation",
                 "ec2:RevokeSecurityGroupEgress",
-                "ec2:RevokeSecurityGroupIngress"
+                "ec2:RevokeSecurityGroupIngress",
+                "ec2:UnassignPrivateNatGatewayAddress"
             ],
             "Resource": [
                 "*"
@@ -211,13 +223,36 @@ resource "aws_iam_policy" "terraform_pike" {
             "Effect": "Allow",
             "Action": [
                 "logs:AssociateKmsKey",
+                "logs:CreateLogDelivery",
                 "logs:CreateLogGroup",
                 "logs:DeleteLogGroup",
                 "logs:DeleteRetentionPolicy",
                 "logs:DescribeLogGroups",
                 "logs:DisassociateKmsKey",
+                "logs:ListTagsForResource",
                 "logs:ListTagsLogGroup",
                 "logs:PutRetentionPolicy"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
+                "vpc-lattice:CreateServiceNetworkVpcEndpointAssociation",
+                "vpc-lattice:DescribeServiceNetworkVpcEndpointAssociation"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor4",
+            "Effect": "Allow",
+            "Action": [
+                "vpce:AllowMultiRegion"
             ],
             "Resource": [
                 "*"
